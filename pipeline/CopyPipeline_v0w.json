@@ -1,0 +1,92 @@
+{
+	"name": "CopyPipeline_v0w",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_v0w",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Destination",
+						"value": "[dbo].[Contact]"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "SqlServerSource",
+						"sqlReaderQuery": "select * from dbo.Customers"
+					},
+					"sink": {
+						"type": "AzureSqlSink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "FirstName",
+									"type": "String"
+								},
+								"sink": {
+									"name": "First",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "LastName",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Last",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Birthday",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "DOB",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "ModifiedOn",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "LastModified",
+									"type": "DateTime"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_v0w",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_v0w",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
