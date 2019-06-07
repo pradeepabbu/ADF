@@ -1,0 +1,13 @@
+{
+	"name": "AzureDataLakeStoreMain",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "AzureDataLakeStore",
+		"typeProperties": {
+			"dataLakeStoreUri": "https://icoedl.azuredatalakestore.net/webhdfs/v1",
+			"tenant": "bd3eeefe-e2f5-40d6-abc6-bbb9c8f48d03",
+			"subscriptionId": "a87c8ea8-69d9-4ec9-a22a-f00bb677e5cd",
+			"resourceGroupName": "MAHSEU-RGP-9602656-CIS_MESSAGING_R2_DEV_ICOE"
+		}
+	}
+}
