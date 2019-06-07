@@ -24,7 +24,15 @@
 						"sqlReaderQuery": "select * from dbo.Customers"
 					},
 					"sink": {
-						"type": "AzureSqlSink"
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureDataLakeStoreWriteSetting"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSetting",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
 					},
 					"enableStaging": false,
 					"translator": {
@@ -36,8 +44,8 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "First",
-									"type": "String"
+									"type": "String",
+									"ordinal": 1
 								}
 							},
 							{
@@ -46,8 +54,8 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "Last",
-									"type": "String"
+									"type": "String",
+									"ordinal": 2
 								}
 							},
 							{
@@ -56,8 +64,8 @@
 									"type": "DateTime"
 								},
 								"sink": {
-									"name": "DOB",
-									"type": "DateTime"
+									"type": "DateTime",
+									"ordinal": 3
 								}
 							},
 							{
@@ -66,8 +74,8 @@
 									"type": "DateTime"
 								},
 								"sink": {
-									"name": "LastModified",
-									"type": "DateTime"
+									"type": "DateTime",
+									"ordinal": 4
 								}
 							}
 						]
@@ -81,7 +89,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DestinationDataset_v0w",
+						"referenceName": "DelimitedText",
 						"type": "DatasetReference"
 					}
 				]
