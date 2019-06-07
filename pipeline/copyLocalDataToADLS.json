@@ -40,17 +40,17 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "FirstName",
-									"type": "String"
+									"name": "ID",
+									"type": "Int32"
 								},
 								"sink": {
-									"type": "String",
+									"type": "Int32",
 									"ordinal": 1
 								}
 							},
 							{
 								"source": {
-									"name": "LastName",
+									"name": "CustomerID",
 									"type": "String"
 								},
 								"sink": {
@@ -60,7 +60,7 @@
 							},
 							{
 								"source": {
-									"name": "Birthday",
+									"name": "DateOfSale",
 									"type": "DateTime"
 								},
 								"sink": {
@@ -70,12 +70,22 @@
 							},
 							{
 								"source": {
-									"name": "ModifiedOn",
-									"type": "DateTime"
+									"name": "AmountOfSale",
+									"type": "Decimal"
 								},
 								"sink": {
-									"type": "DateTime",
+									"type": "Decimal",
 									"ordinal": 4
+								}
+							},
+							{
+								"source": {
+									"name": "ItemPurchased",
+									"type": "String"
+								},
+								"sink": {
+									"type": "String",
+									"ordinal": 5
 								}
 							}
 						]
