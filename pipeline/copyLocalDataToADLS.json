@@ -83,7 +83,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDataset_v0w",
+						"referenceName": "SqlServerTableSource",
 						"type": "DatasetReference"
 					}
 				],

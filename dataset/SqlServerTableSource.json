@@ -1,0 +1,11 @@
+{
+	"name": "SqlServerTableSource",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServerSource",
+			"type": "LinkedServiceReference"
+		},
+		"type": "SqlServerTable",
+		"schema": []
+	}
+}
