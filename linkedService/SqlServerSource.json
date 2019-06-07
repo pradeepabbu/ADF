@@ -1,0 +1,16 @@
+{
+	"name": "SqlServerSource",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=9602656-ICOE;initial catalog=master",
+			"userName": "sga-res-pub\\Pradeep.Kumar11-b",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI3YTI3OTA3Ni1jNTBhLTQzMDctOTEyMS1lMDRmMDc0ZmVjNjYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
