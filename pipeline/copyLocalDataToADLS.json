@@ -21,7 +21,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "SqlServerSource",
-						"sqlReaderQuery": "select * from dbo.Customers"
+						"sqlReaderQuery": "select * from dbo.Sales"
 					},
 					"sink": {
 						"type": "DelimitedTextSink",
